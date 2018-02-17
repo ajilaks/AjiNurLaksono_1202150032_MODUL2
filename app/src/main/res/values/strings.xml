@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">One Piece Resto</string>
+
+    <string-array name="menu">
+        <item>Pilih Meja</item>
+        <item>Meja 1</item>
+        <item>Meja 2</item>
+        <item>Meja 3</item>
+        <item>Meja 4</item>
+        <item>Meja 5</item>
+    </string-array>
+    <string name="date_picker">datePicker</string>
+    <string name="time_picker">timePicker</string>
+
+    <string name="nasgor">Nasi, Telur, Cinta</string>
+    <string name="capcay">Sayuran, Bumbu temago, Telur</string>
+    <string name="miegoreng">Mie jawa, Telur, Sosis, Sayur</string>
+    <string name="nasimawut">Nasi, Mie Goreng, Daging/Ayam, Telur</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.oji.ajinurlaksono_1202150032_modul2.TakeAway">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Away"
+        />
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identitas Pemesan:"
+        android:textSize="20dp"
+        />
+    <EditText
+        android:id="@+id/eNama"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:hint="Nama"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/ePhone"
+        android:hint="No. Telp"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:inputType="phone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/eAlamat"
+        android:hint="Alamat"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        />
+    <EditText
+        android:id="@+id/eCatatan"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:hint="Catatan"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/eTanggal"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="15dp"
+            android:hint="Tanggal" />
+
+        <Button
+            android:layout_width="63dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@drawable/date"
+            android:onClick="showDatePickerDialog"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/eWaktu"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="15dp"
+            android:hint="Waktu kirim" />
+
+        <Button
+            android:layout_width="63dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@drawable/time"
+            android:onClick="showTimePickerDialog"
+            android:text="" />
+    </LinearLayout>
+
+    <Button
+        android:onClick="mesan"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#1E90FF"
+        android:textColor="#fff"
+        android:padding="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Pesanan"/>
+</LinearLayout>
