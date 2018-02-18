@@ -16,32 +16,32 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context, "AJI_1202150032", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(context, "AJI_1202150032", Toast.LENGTH_LONG); //membuat toast
         toast.show();
     }
 
     public void dineIn(View view) {
 
-        this.lanjut = "Dinner In";
+        this.lanjut = "Dinner In";  //mengisi attribute ketika dinner in dipilih
 
     }
 
     public void takeAway(View view) {
-        this.lanjut = "Take Away";
+        this.lanjut = "Take Away";  //mengisi attribute ketika take away dipilih
 
     }
 
     public void pilih(View view) {
         if(this.lanjut == "Dinner In"){
-            Intent i = new Intent(this, DinnerIn.class);
+            Intent i = new Intent(this, DinnerIn.class); //ketika attribute lanjut dinner in, activity intent menuju ke dinner in class
             startActivity(i);
 
         }else if(this.lanjut == "Take Away"){
-            Intent i = new Intent(this, TakeAway.class);
+            Intent i = new Intent(this, TakeAway.class);    //ketika attribute lanjut take away, activity intent menuju ke take away class
             startActivity(i);
         }else{
             Context context = getApplicationContext();
-            Toast toast = Toast.makeText(context, "Masukkan Data yang Benar", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(context, "Masukkan Data yang Benar", Toast.LENGTH_LONG);   //ketika tidak ada yg dipilih, maka hanya akan memunculkan toast
             toast.show();
 
         }

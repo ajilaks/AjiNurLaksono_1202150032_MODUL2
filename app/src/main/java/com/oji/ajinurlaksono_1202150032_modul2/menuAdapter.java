@@ -20,18 +20,18 @@ import java.util.List;
 
 
      public menuAdapter(Context context, List<menu> menuList) {
-         mInflater = LayoutInflater.from(context);
+         mInflater = LayoutInflater.from(context); //inisiasi inflater
          this.menuList = menuList;
 
      }
 
-     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{ // class MyCiewHolder
          public TextView nama, harga;
          ImageView gambar;
 
          public MyViewHolder(View view) {
              super(view);
-
+                                                                    //menginisiasi variable2 attribute
              nama = (TextView) view.findViewById(R.id.nama);
              harga = (TextView) view.findViewById(R.id.harga);
              gambar = (ImageView) view.findViewById(R.id.gambar);
@@ -40,7 +40,7 @@ import java.util.List;
 
 
          @Override
-         public void onClick(View view) {
+         public void onClick(View view) {               // ketika di klik salah satu menu
              int mPosition = getLayoutPosition();
 // Use that to access the affected item in mWordList.
              String element = menuList.get(mPosition).toString();
@@ -48,7 +48,7 @@ import java.util.List;
              Intent i = new Intent(view.getContext(), Detail.class);
              int gambar = menuList.get(mPosition).getGambar();
              int komposisi = menuList.get(mPosition).getKomposisi();
-             i.putExtra("gambar", gambar);
+             i.putExtra("gambar", gambar);      // put extra ke intent berikutnya
              i.putExtra("nama",nama.getText());
              i.putExtra("harga",harga.getText());
              i.putExtra("komposisi",komposisi);
@@ -71,7 +71,7 @@ import java.util.List;
          menu menu = menuList.get(position);
          holder.gambar.setImageResource(menu.getGambar());
 
-         holder.harga.setText(menu.getHarga());
+         holder.harga.setText(menu.getHarga());            //get value ke textView
          holder.nama.setText(menu.getNama());
 
 
@@ -81,7 +81,5 @@ import java.util.List;
      public int getItemCount() {
          return menuList.size();
      }
-
-
 
 }

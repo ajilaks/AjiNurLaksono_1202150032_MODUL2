@@ -28,18 +28,18 @@ public class DinnerIn extends AppCompatActivity implements AdapterView.OnItemSel
         // Create the spinner.
         Spinner spinner = (Spinner) findViewById(R.id.sNoMejas);
         if (spinner != null) {
-            spinner.setOnItemSelectedListener(this);
+            spinner.setOnItemSelectedListener(this);    //perkondisian untuk memunculkan spinner
         }
 
-        // Create ArrayAdapter using the string array and default spinner layout.
+        // membuat ArrayAdapter untuk layout kita.
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.menu, android.R.layout.simple_spinner_item);
 
-        // Specify the layout to use when the list of choices appears.
+        // memunculkan menu yang akan kita pilih
         adapter.setDropDownViewResource
                 (android.R.layout.simple_spinner_dropdown_item);
 
-        // Apply the adapter to the spinner.
+        // melakukan set adapter jika dipilih
         if (spinner != null) {
             spinner.setAdapter(adapter);
         }
@@ -47,10 +47,10 @@ public class DinnerIn extends AppCompatActivity implements AdapterView.OnItemSel
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) { //method untuk memproses ketika item yang dipilih
     this.pilihan = adapterView.getItemAtPosition(i).toString();
     String showToast = this.pilihan+" Telah Terpesan";
-    this.someVar = i;
+    this.someVar = i;   //disni ketika array spinner yang dipilih adalah 0, maka tidak akan memunculkan toast, tapi begitupula sebaliknya
     if(i!=0) {
         Context context = getApplicationContext();
         Toast toast = Toast.makeText(context, showToast, Toast.LENGTH_LONG);
@@ -67,7 +67,7 @@ public class DinnerIn extends AppCompatActivity implements AdapterView.OnItemSel
         Context context = getApplicationContext();
 
         if(someVar!=0) {
-        Intent i = new Intent(this, ContentMenu.class);
+        Intent i = new Intent(this, ContentMenu.class); //ketika ada item yang dipilih selain 0, maka akan meproses ke activity berikutnya
         startActivity(i);}
         else {
             Toast toast = Toast.makeText(context, "Pilih Meja Dulu", Toast.LENGTH_LONG);

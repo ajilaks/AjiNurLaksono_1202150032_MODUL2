@@ -29,15 +29,15 @@ public class ContentMenu extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         mAdapter = new menuAdapter(this, menuList);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());       //menginisiasi adapter untuk recycleView
+        recyclerView.setLayoutManager(mLayoutManager);      //menghubungkan adapter dan layout
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
-        prepareMovieData();
+        prepareMenuData();
 
     }
 
-    private void prepareMovieData() {
+    private void prepareMenuData() {                                                                                    //memasukkan beberapa menu ke dalam array objek
         menu menu = new menu(R.drawable.capcay, "Capcay", "Rp. 12.000", R.string.capcay);
         menuList.add(menu);
 

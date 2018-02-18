@@ -18,11 +18,11 @@ public class TakeAway extends AppCompatActivity {
 
     public void showDatePickerDialog(View view) {
         DialogFragment newFragment = new DatePickerFragment();
-        newFragment.show(getSupportFragmentManager(), getString(R.string.date_picker));
+        newFragment.show(getSupportFragmentManager(), getString(R.string.date_picker)); //menampilkan fragment date picker
 
     }
     public void processDatePickerResult(int year, int month, int day) {
-        String month_string = Integer.toString(month + 1);
+        String month_string = Integer.toString(month + 1);          //untuk memproses datePciker yang telah dipilih
         String day_string = Integer.toString(day);
         String year_string = Integer.toString(year);
         // Assign the concatenated strings to dateMessage.
@@ -31,12 +31,12 @@ public class TakeAway extends AppCompatActivity {
         EditText eTanggal = (EditText) findViewById(R.id.eTanggal);
         eTanggal.setText(dateMessage);
 
-        Toast.makeText(this, dateMessage,
+        Toast.makeText(this, dateMessage,                   //menampilkan toast
                 Toast.LENGTH_SHORT).show();
     }
 
     public void showTimePickerDialog(View view) {
-        DialogFragment newFragment = new TimePickerFragment();
+        DialogFragment newFragment = new TimePickerFragment();  //menampilkan fragment time picker
         newFragment.show(getSupportFragmentManager(),
                 getString(R.string.time_picker));
 
@@ -45,7 +45,7 @@ public class TakeAway extends AppCompatActivity {
     public void processTimePickerResult(int hourOfDay, int minute) {
         // Convert time elements into strings.
         String hour_string = Integer.toString(hourOfDay);
-        String minute_string = Integer.toString(minute);
+        String minute_string = Integer.toString(minute);        //untuk memproses timePicker yang telah dipilih
         // Assign the concatenated strings to timeMessage.
 
         EditText eWaktu = (EditText) findViewById(R.id.eWaktu);
@@ -57,6 +57,6 @@ public class TakeAway extends AppCompatActivity {
 
     public void mesan(View view) {
         Intent i = new Intent(this, ContentMenu.class);
-        startActivity(i);
+        startActivity(i);                                       //untuk  melanjutkan ke activity berikutnha
     }
 }

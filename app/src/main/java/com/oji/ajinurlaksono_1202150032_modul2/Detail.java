@@ -20,7 +20,7 @@ public class Detail extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         Intent i = getIntent();
-        int gambar = i.getExtras().getInt("gambar");
+        int gambar = i.getExtras().getInt("gambar");     // get attribute yang di oper dari activity sebelumnya
         String nama = i.getStringExtra("nama");
         String harga = i.getStringExtra("harga");
         int komposisis = i.getExtras().getInt("komposisi");
@@ -31,14 +31,14 @@ public class Detail extends AppCompatActivity {
 
 
         gambarDetail.setImageResource(gambar);
-        namaMenu.setText(nama);
+        namaMenu.setText(nama);                             // set attribute ke textView
         hargaMenu.setText(harga);
         komposisi.setText(komposisis);
     }
 
     public void konfirmasi(View view) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Pemesanan Berhasil, Harap tunggu sebentar");
+        alertDialogBuilder.setMessage("Pemesanan Berhasil, Harap tunggu sebentar");         //menggunakan pemanis untuk pesanan berhasil
         alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
